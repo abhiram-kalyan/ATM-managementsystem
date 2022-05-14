@@ -1,4 +1,4 @@
-<?php
+http://localhost/SWE/<?php
 session_start();
  
 if(!isset($_SESSION['user_id'])){
@@ -27,7 +27,7 @@ if(!empty($_POST['amt'])){
   $a22=$rm2['balance'];
   
   if($a11<$amt){
-        header('Location:https://atmvit.000webhostapp.com/err.php');
+        header('Location:http://localhost/SWE/err.php');
     }
   else{
   $a11=$a11-$amt;
@@ -52,7 +52,7 @@ $rql1="INSERT INTO Statement (Description,userid,refid,credit,Debit,balance)
 VALUES ('$with2','$tid', '$refid','$amt',0,'$a22')";
 mysqli_query($conn,$rql1);
 
- header('Location:https://atmvit.000webhostapp.com/ty.php');
+ header('Location:http://localhost/SWE//ty.php');
 
 }
   

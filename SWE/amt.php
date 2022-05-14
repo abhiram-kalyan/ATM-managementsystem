@@ -22,7 +22,7 @@ if(!empty($_POST['am'])){
      $rm1=mysqli_fetch_assoc($q1);
     $bal=$rm1['balance'];
     if($bal<$am){
-        header('Location:https://atmvit.000webhostapp.com/err.php');
+        header('Location: http://localhost/SWE/err.php');
     }
     else{
     $bal=$bal-$am;
@@ -33,7 +33,7 @@ mysqli_query($conn,$rql);
     
    $res= mysqli_query($conn,$sql);
    if($res){
-      header('Location:https://atmvit.000webhostapp.com/ty.php');
+      header('Location: http://localhost/SWE/ty.php');
    }
    
     } 
